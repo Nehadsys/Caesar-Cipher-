@@ -13,9 +13,6 @@ for char in text:
         # Convert the character to ASCII code
         ASCII = ord(char)
         # Shift the ASCII code by the specified key
-        # We subtract 65 from the ASCII code to make 'A' the starting point,
-        # then add the key and take the modulo 26 to handle the wrap around from 'Z' to 'A'
-        # Finally, we add 65 to the result to shift it back to the correct ASCII range
         shifted_ASCII = ((((ASCII - 65) + Key) % 26) + ord("A"))
         # Convert the ASCII code to the corresponding character and add it to the encrypted text
         encrypted_text += chr(shifted_ASCII)
@@ -24,9 +21,6 @@ for char in text:
         # Convert the character to ASCII code
         ASCII = ord(char)
         # Shift the ASCII code by the specified key
-        # We subtract 97 from the ASCII code to make 'a' the starting point,
-        # then add the key and take the modulo 26 to handle the wrap around from 'z' to 'a'
-        # Finally, we add 97 to the result to shift it back to the correct ASCII range
         shifted_ASCII = ((((ASCII - 97) + Key) % 26) + ord("a"))
         # Convert the ASCII code to the corresponding character and add it to the encrypted text
         encrypted_text += chr(shifted_ASCII)
